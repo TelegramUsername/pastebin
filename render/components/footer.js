@@ -24,43 +24,6 @@ module.exports = (m, {isSnippet}) => {
             ),
             " ",
         ),
-        m("a#name-label", {
-            href: "https://github.com/mojurasu/memocho",
-            target: "blank",
-            rel: "noopener"
-        }, " Memochō"),
-
-        m("code.footer-text", [
-            " Built by",
-            m(
-                "a",
-                {
-                    href: "https://github.com/MKRhere",
-                    target: "blank",
-                    rel: "noopener"
-                },
-                "@MKRhere"
-            ),
-            ", Modified by",
-            m(
-                "a",
-                {
-                    href: "https://github.com/SitiSchu",
-                    target: "blank",
-                    rel: "noopener"
-                },
-                "@SitiSchu"
-            ),
-            "",
-            m(
-                "a",
-                {
-                    href: "https://github.com/mojurasu/memocho",
-                    target: "blank",
-                    rel: "noopener"
-                },
-                "Fork me!"
-            ),
         ]),
     ]);
 };
