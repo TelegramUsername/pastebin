@@ -24,7 +24,7 @@ app.use(mongoose());
 app.use(render());
 
 app.post('/fork', fork);
-app.post('/', create);
+app.post('/', createSnippet);
 
 app.post('/create', create);
 
