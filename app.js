@@ -9,13 +9,14 @@ const app = express();
 
 const home = require('./routes/home');
 const getSnippet = require('./routes/getSnippet');
+const create = require('./routes/create');
 const createSnippet = require('./routes/createSnippet');
 const fork = require('./routes/fork');
 
 app.use(helmet());
 app.use(express.static(__dirname + '/public'));
 app.use('/custom', express.static(__dirname + '/custom'));
-app.use(express.urlencoded({extended: true})); // parse formdata
+app.use(express.urlencoded({ extended: true })); // parse formdata
 app.use(express.json()); // parse JSON requests
 app.use(rawBody());
 
@@ -23,7 +24,9 @@ app.use(mongoose());
 app.use(render());
 
 app.post('/fork', fork);
-app.post('/', createSnippet);
+app.post('/', create);
+
+app.post('/create', create);
 
 app.get('/~:id', getSnippet);
 app.get('/', home);
