@@ -7,7 +7,7 @@ module.exports = (req, res) => {
       "body": JSON.stringify({
         snippet: content
       })
-    }
+    })
         .then(doc => {
             return res.redirect(`/${doc.id}`);
         });
