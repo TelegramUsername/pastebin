@@ -6,7 +6,7 @@ module.exports = (m, render, {location, content = '', language}) => {
     return render(m('html',
         [
             head(m, {
-                title: 'Memochō',
+                title: 'Pastebin',
                 description: 'Lightweight pastebin alternative',
                 keywords: ['pastebin', 'hastebin', 'notes'],
                 styles: ['/css/style.css', '/custom/style.css']
