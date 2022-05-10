@@ -9,7 +9,7 @@ module.exports = (req, res) => {
       })
     }
         .then(doc => {
-            return res.redirect({id: `~${doc.id}`});
+            return res.redirect(`/${doc.id}`);
         });
 
 };
